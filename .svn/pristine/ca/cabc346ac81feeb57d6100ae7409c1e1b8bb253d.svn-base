@@ -1,0 +1,61 @@
+<template>
+  <div class="container">
+    <div class="box">
+      <img src="./bg.jpg" width="100%" alt="">
+      <div class="move" ref="move" @mousemove="mousemove">
+      <img src="./bg.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      mouseWidth: '',
+      moveWidth: ''
+    }
+  },
+  created() {
+
+  },
+  methods: {
+    mousemove(e) {
+      this.mouseWidth = e.clientX;
+      this.moveWidth = this.$refs.move.offsetLeft;
+      console.log(this.mouseWidth)
+      console.log(this.$refs.move.offsetLeft)
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+}
+.box {
+  width: 800px;
+  min-height: 200px;
+  position: relative;
+}
+.move {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.move img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+</style>

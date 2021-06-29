@@ -1,0 +1,330 @@
+<template>
+  <div class="container">
+
+    <h3>基础样式</h3>
+
+    <h5>实线</h5>
+    <hr class="hr-solid" />
+
+    <h5>点线（1px和2px）</h5>
+    <hr class="hr-dotted" />
+    <hr class="hr-dotted2" />
+
+    <h5>虚线（1px和2px）（浏览器默认，不同浏览器表现细节有差异）</h5>
+    <hr class="hr-dashed" />
+    <hr class="hr-dashed2" />
+
+    <h5>双实线</h5>
+    <hr class="hr-double" />
+
+    <h5>疏密可控的虚线（浏览器表现一致）</h5>
+
+    <hr class="hr-dashed-fixed" />
+    <hr
+      class="hr-dashed-fixed"
+      style="--dashed-filled: 6px; --dashed-open: 5px;"
+    />
+
+    <h5>两头虚的分隔线</h5>
+    <hr class="hr-edge-weak" />
+
+    <h5>斜纹分隔线</h5>
+    <hr class="hr-twill" />
+    <hr class="hr-twill-colorful" />
+
+    <h5>波浪线</h5>
+    <hr class="hr-wavy" />
+
+    <h5>阴影线</h5>
+    <hr class="hr-shadow" />
+
+    <h3>花样年华</h3>
+    <h5>中间有装饰</h5>
+    <hr class="hr-mid-circle" />
+    <hr class="hr-mid-square" />
+
+    <h5>中间有多个装饰</h5>
+    <hr class="hr-mid-circle" multiline />
+    <hr class="hr-mid-square" multiline />
+
+    <h5>装饰在两端</h5>
+    <hr class="hr-space-square" />
+
+    <h5>装饰复杂一点点</h5>
+    <hr class="hr-double-arrow" />
+
+    <h3>带文字内容</h3>
+
+    <h5>两端实线</h5>
+    <hr class="hr-solid-content" data-content="分隔线" />
+    <hr class="hr-solid-content" data-content="文字自适应，背景透明" />
+
+    <h5>两端虚线</h5>
+    <hr class="hr-dashed-content" data-content="分隔线" />
+
+    <h5>两端淡出</h5>
+    <hr class="hr-fade-content" data-content="分隔线" />
+
+    <h5>内容装饰</h5>
+    <hr class="hr-mid-border-content" data-content="分隔线" />
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss" scoped>
+.container {
+  display: inline;
+}
+h3 {
+  font-family: system-ui;
+  border-left: solid #2a80eb;
+  padding-left: 0.5em;
+  margin-top: 1.25em;
+}
+h5 {
+  margin-bottom: 0;
+  font-size: 87.5%;
+}
+hr {
+  margin: 1em 0;
+}
+.hr-solid {
+  border: 0;
+  border-top: 1px solid #d0d0d5;
+}
+.hr-dotted {
+  border: 0;
+  border-top: 1px dotted #a2a9b6;
+}
+.hr-dotted2 {
+  border: 0;
+  border-top: 2px dotted #a2a9b6;
+}
+.hr-dashed {
+  border: 0;
+  border-top: 1px dashed #a2a9b6;
+}
+.hr-dashed2 {
+  border: 0;
+  border-top: 2px dashed #a2a9b6;
+}
+.hr-double {
+  border: 0;
+  border-top: 3px double #d0d0d5;
+}
+.hr-dashed-fixed {
+  border: 0;
+  padding-top: 1px;
+  /* for IE浏览器 */
+  background: repeating-linear-gradient(
+    to right,
+    #a2a9b6 0px,
+    #a2a9b6 4px,
+    transparent 0px,
+    transparent 10px
+  );
+  /* for 现代浏览器 */
+  background: repeating-linear-gradient(
+    to right,
+    #a2a9b6 0 var(--dashed-filled, 4px),
+    transparent 0 calc(var(--dashed-filled, 4px) + var(--dashed-open, 6px))
+  );
+}
+.hr-edge-weak {
+  border: 0;
+  padding-top: 1px;
+  background: linear-gradient(to right, transparent, #d0d0d5, transparent);
+}
+.hr-twill {
+  border: 0;
+  padding: 3px;
+  background: repeating-linear-gradient(
+    135deg,
+    #a2a9b6 0px,
+    #a2a9b6 1px,
+    transparent 1px,
+    transparent 6px
+  );
+}
+/* 现代浏览器only */
+.hr-twill-colorful {
+  border: 0;
+  padding: 3px;
+  background: linear-gradient(135deg, red, orange, green, blue, purple);
+  --mask-image: repeating-linear-gradient(
+    135deg,
+    #000 0px,
+    #000 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  -webkit-mask-image: var(--mask-image);
+  mask-image: var(--mask-image);
+}
+.hr-wavy {
+  border: 0;
+  color: #d0d0d5;
+  height: 0.5em;
+  white-space: nowrap;
+  letter-spacing: 100vw;
+  padding-top: 0.5em;
+}
+.hr-wavy::before {
+  content: "\2000\2000";
+  /* IE浏览器实线代替 */
+  text-decoration: overline;
+  /* 现代浏览器 */
+  text-decoration: overline wavy;
+}
+
+.hr-shadow {
+  border: 0;
+  padding-top: 10px;
+  color: #d0d0d5;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 10px 10px -10px;
+}
+
+.hr-mid-circle,
+.hr-mid-square {
+  border: 0;
+  color: #d0d0d5;
+  background: linear-gradient(currentColor, currentColor) no-repeat center;
+  background-size: 100% 1px;
+}
+.hr-mid-circle::before {
+  content: "";
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin: auto;
+}
+.hr-mid-square::before {
+  content: "";
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  transform: rotate(45deg);
+  background-color: currentColor;
+  margin: 3px auto;
+}
+.hr-mid-circle[multiline]::before {
+  box-shadow: 1.5em 0, -1.5em 0;
+}
+.hr-mid-square[multiline]::before {
+  box-shadow: 1.25em -1.25em, -1.25em 1.25em;
+}
+
+.hr-space-square {
+  border: 0;
+  color: #d0d0d5;
+  background: linear-gradient(currentColor, currentColor) no-repeat center;
+  background-size: calc(100% - 1.5em - 6px) 1px;
+  display: flex;
+  justify-content: space-between;
+}
+.hr-space-square::before,
+.hr-space-square::after {
+  content: "";
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+  border: 1px solid;
+  margin: 3px;
+}
+
+.hr-double-arrow {
+  color: #d0d0d5;
+  border: double;
+  border-width: 3px 5px;
+  border-color: #d0d0d5 transparent;
+  height: 1px;
+  overflow: visible;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+.hr-double-arrow:before,
+.hr-double-arrow:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-width: 0 3px 3px 0;
+  border-style: double;
+  top: -3px;
+  background: radial-gradient(2px at 1px 1px, currentColor 2px, transparent 0)
+    no-repeat;
+}
+.hr-double-arrow:before {
+  transform: rotate(-45deg);
+  left: -20px;
+}
+.hr-double-arrow:after {
+  transform: rotate(135deg);
+  right: -20px;
+}
+
+.hr-solid-content,
+.hr-dashed-content,
+.hr-fade-content,
+.hr-mid-border-content {
+  color: #a2a9b6;
+  border: 0;
+  font-size: 12px;
+  padding: 1em 0;
+  position: relative;
+}
+.hr-solid-content::before,
+.hr-dashed-content::before,
+.hr-fade-content::before,
+.hr-mid-border-content::before {
+  content: attr(data-content);
+  position: absolute;
+  padding: 0 1ch;
+  line-height: 1px;
+  border: solid #d0d0d5;
+  border-width: 0 99vw;
+  width: fit-content;
+  /* for IE浏览器 */
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hr-dashed-content::before {
+  border-image: repeating-linear-gradient(
+      90deg,
+      #d0d0d5,
+      #d0d0d5 1px,
+      transparent 1px,
+      transparent 2px
+    ) 0 85% / 0 repeat;
+}
+.hr-fade-content {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black,
+    transparent
+  );
+  mask-image: linear-gradient(to right, transparent, black, transparent);
+}
+
+.hr-mid-border-content::after {
+  content: attr(data-content);
+  position: absolute;
+  padding: 4px 1ch;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  border: 1px solid #d0d0d5;
+}
+</style>
