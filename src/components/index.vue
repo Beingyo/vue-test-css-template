@@ -29,11 +29,11 @@
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="dayAndNight" @click="routeLink">昼夜</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="magnifier" @click="routeLink">放大镜</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="borderRotate" @click="routeLink">边框转动</span></div></el-col>
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="hoverLight" @click="routeLink">悬浮发光</span></div></el-col>
     </el-row>
 
     <el-row :gutter="10">
-      <!-- <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="split" @click="routeLink">分裂</span></div></el-col>
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->

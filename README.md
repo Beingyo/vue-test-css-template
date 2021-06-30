@@ -1,7 +1,13 @@
 ## 介绍说明
-1、记录一些CSS效果demo，随缘更新
+1、主要参考B站up主 [xiao-high](https://space.bilibili.com/410197001/) 和 [山羊の前端小窝](https://space.bilibili.com/266664645/)
 
-2、install 如果遇到 node-sass@4.14.1 错误，可以先执行 npm config set sass_binary_site=https://npm.taobao.org/mirrors/node-sass 对 node-sass 的数据源设置再继续 install
+2、记录一些CSS效果demo，随缘更新
+
+3、install 如果遇到 node-sass@4.14.1 错误，可以先执行 npm config set sass_binary_site=https://npm.taobao.org/mirrors/node-sass 对 node-sass 的数据源设置再继续 install
+
+### 1.0.0(2021-06-30)
+
+例子：悬浮发光、分裂
 
 ### 1.0.0(2021-06-29)
 
@@ -86,3 +92,11 @@
 #### 边框转动
 
 ![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/borderRotate.png)
+
+#### 悬浮发光
+
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/hoverLight.png)
+
+#### 分裂
+
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/split.png)

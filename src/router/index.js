@@ -30,9 +30,9 @@ export default new Router({
     {path: '/dayAndNight', name: 'dayAndNight', meta: {title: '昼夜'}, component: () => import('@/page/dayAndNight/index')},
     {path: '/magnifier', name: 'magnifier', meta: {title: '放大镜'}, component: () => import('@/page/magnifier/index')},
     {path: '/borderRotate', name: 'borderRotate', meta: {title: '边框转动'}, component: () => import('@/page/borderRotate/index')},
-    // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},
+    {path: '/hoverLight', name: 'hoverLight', meta: {title: '悬浮发光'}, component: () => import('@/page/hoverLight/index')},
 
-    // {path: '/glass', name: 'glass', meta: {title: '毛玻璃'}, component: () => import('@/page/glass/index')},
+    {path: '/split', name: 'split', meta: {title: '分裂'}, component: () => import('@/page/split/index')},
     // {path: '/dayAndNight', name: 'dayAndNight', meta: {title: '昼夜'}, component: () => import('@/page/dayAndNight/index')},
     // {path: '/magnifier', name: 'magnifier', meta: {title: '放大镜'}, component: () => import('@/page/magnifier/index')},
     // {path: '/stereoText', name: 'stereoText', meta: {title: '立体文字'}, component: () => import('@/page/stereoText/index')},
