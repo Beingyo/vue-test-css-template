@@ -21,8 +21,8 @@
 export default {
   data() {
     return {
-      day: require("./day.png"),
-      night: require("./night.png"),
+      day: require("@/assets/day.png"),
+      night: require("@/assets/night.png"),
       mouseWidth: '',
       moveWidth: '',
       isDown: false

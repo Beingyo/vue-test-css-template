@@ -20,7 +20,7 @@
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="eclipse" @click="routeLink">日食</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="weather" @click="routeLink">天气</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="gradual" @click="routeLink">渐进入场</span></div></el-col>
-      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="stereoText" @click="routeLink">立体文字</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="solidText" @click="routeLink">立体文字</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="fuse" @click="routeLink">融合</span></div></el-col>
     </el-row>
 
@@ -34,7 +34,7 @@
 
     <el-row :gutter="10">
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="split" @click="routeLink">分裂</span></div></el-col>
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="book" @click="routeLink">翻页</span></div></el-col>
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->

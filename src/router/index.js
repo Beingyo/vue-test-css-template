@@ -23,7 +23,7 @@ export default new Router({
     {path: '/eclipse', name: 'eclipse', meta: {title: '日食'}, component: () => import('@/page/eclipse/index')},
     {path: '/weather', name: 'weather', meta: {title: '天气'}, component: () => import('@/page/weather/index')},
     {path: '/gradual', name: 'gradual', meta: {title: '渐进入场'}, component: () => import('@/page/gradual/index')},
-    {path: '/stereoText', name: 'stereoText', meta: {title: '立体文字'}, component: () => import('@/page/stereoText/index')},
+    {path: '/solidText', name: 'solidText', meta: {title: '立体文字'}, component: () => import('@/page/solidText/index')},
     {path: '/fuse', name: 'fuse', meta: {title: '融合'}, component: () => import('@/page/fuse/index')},
 
     {path: '/glass', name: 'glass', meta: {title: '毛玻璃'}, component: () => import('@/page/glass/index')},
@@ -33,9 +33,15 @@ export default new Router({
     {path: '/hoverLight', name: 'hoverLight', meta: {title: '悬浮发光'}, component: () => import('@/page/hoverLight/index')},
 
     {path: '/split', name: 'split', meta: {title: '分裂'}, component: () => import('@/page/split/index')},
-    // {path: '/dayAndNight', name: 'dayAndNight', meta: {title: '昼夜'}, component: () => import('@/page/dayAndNight/index')},
+    {path: '/book', name: 'book', meta: {title: '翻页'}, component: () => import('@/page/book/index')},
     // {path: '/magnifier', name: 'magnifier', meta: {title: '放大镜'}, component: () => import('@/page/magnifier/index')},
-    // {path: '/stereoText', name: 'stereoText', meta: {title: '立体文字'}, component: () => import('@/page/stereoText/index')},
+    // {path: '/solidText', name: 'solidText', meta: {title: '立体文字'}, component: () => import('@/page/solidText/index')},
+    // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},
+
+    // {path: '/split', name: 'split', meta: {title: '分裂'}, component: () => import('@/page/split/index')},
+    // {path: '/book', name: 'book', meta: {title: '翻页'}, component: () => import('@/page/book/index')},
+    // {path: '/magnifier', name: 'magnifier', meta: {title: '放大镜'}, component: () => import('@/page/magnifier/index')},
+    // {path: '/solidText', name: 'solidText', meta: {title: '立体文字'}, component: () => import('@/page/solidText/index')},
     // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},
 
     {path: '/test', name: 'test', meta: {title: '测试'}, component: () => import('@/page/test/index')},

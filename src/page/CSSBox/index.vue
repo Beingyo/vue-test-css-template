@@ -89,7 +89,7 @@ body {
   overflow: hidden;
 }
 .background {
-  background: url("./1.jpg") no-repeat;
+  background: url("../../../static/CSSBox.jpg") no-repeat;
   background-size: cover;
   position: absolute;
   background-attachment: fixed;

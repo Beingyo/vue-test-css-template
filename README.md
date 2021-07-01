@@ -71,7 +71,7 @@
 
 #### 立体文字
 
-![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/stereoText.png)
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/solidText.png)
 
 #### 融合
 
@@ -100,3 +100,7 @@
 #### 分裂
 
 ![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/split.png)
+
+#### 翻页
+
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/book.png)

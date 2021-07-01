@@ -1,9 +1,9 @@
 <template>
 	<div class="container">
 		<div class="box" ref="box">
-			<img src="./bg.jpg" width="100%" alt="" />
+			<img :src="imgUrl" width="100%" alt="" />
 			<div class="move" ref="move" @mousemove="mousemove">
-				<img src="./bg.jpg" ref="img" alt="" />
+				<img :src="imgUrl" ref="img" alt="" />
 			</div>
 		</div>
 	</div>
@@ -11,21 +11,28 @@
 
 <script>
 export default {
+	data() {
+		return {
+			imgUrl: require('@/assets/magnifier.jpg'),
+		}
+	},
 	created() {},
 	methods: {
 		mousemove(e) {
-      		// 鼠标移动数据
+			// 鼠标移动数据
 			let mouseWidth = e.clientX
 			let mouseHeight = e.clientY
-      		// box距离页面数据
+			// box距离页面数据
 			let left = this.$refs.box.offsetLeft
 			let top = this.$refs.box.offsetTop
-      		// 放大框的一半
+			// 放大框的一半
 			let halfWidth = this.$refs.move.clientWidth / 2
 			let halfHeight = this.$refs.move.clientHeight / 2
 			// 放大图片与显示图片的比例大小
-			const percentWidth = this.$refs.img.clientWidth / this.$refs.box.clientWidth
-			const percentHeight = this.$refs.img.clientHeight / this.$refs.box.clientHeight
+			const percentWidth =
+				this.$refs.img.clientWidth / this.$refs.box.clientWidth
+			const percentHeight =
+				this.$refs.img.clientHeight / this.$refs.box.clientHeight
 			// 可移动的最小最大距离
 			let minMoveWidth = left + halfWidth
 			let maxMoveWidth = left + this.$refs.box.clientWidth - halfWidth
@@ -33,21 +40,25 @@ export default {
 			let maxMoveHeight = top + this.$refs.box.clientHeight - halfHeight
 			// 移动距离 = 鼠标位置 - box页面距离 - 放大框的一半
 			// 大图的移动距离 = ( 鼠标位置 - box页面距离 ) * 比例大小 - 放大框的一半
-			if(mouseWidth <= minMoveWidth) {
+			if (mouseWidth <= minMoveWidth) {
 				this.$refs.move.style.left = 0 + 'px'
-			} else if(mouseWidth >= maxMoveWidth) {
+			} else if (mouseWidth >= maxMoveWidth) {
 				this.$refs.move.style.right = 0 + 'px'
 			} else {
-				this.$refs.move.style.left = mouseWidth - left - halfWidth + 'px'
-				this.$refs.img.style.left = - ( ( mouseWidth - left ) * percentWidth - halfWidth ) + 'px'
+				this.$refs.move.style.left =
+					mouseWidth - left - halfWidth + 'px'
+				this.$refs.img.style.left =
+					-((mouseWidth - left) * percentWidth - halfWidth) + 'px'
 			}
-			if(mouseHeight <= minMoveHeight) {
+			if (mouseHeight <= minMoveHeight) {
 				this.$refs.move.style.top = 0 + 'px'
-			} else if(mouseHeight >= maxMoveHeight) {
+			} else if (mouseHeight >= maxMoveHeight) {
 				this.$refs.move.style.bottom = 0 + 'px'
 			} else {
-				this.$refs.move.style.top = mouseHeight - top - halfHeight + 'px'
-				this.$refs.img.style.top = - ( ( mouseHeight - top ) * percentHeight - halfHeight ) + 'px'
+				this.$refs.move.style.top =
+					mouseHeight - top - halfHeight + 'px'
+				this.$refs.img.style.top =
+					-((mouseHeight - top) * percentHeight - halfHeight) + 'px'
 			}
 		},
 	},

@@ -18,7 +18,7 @@ export default {};
   justify-content: center;
   align-items: center;
   height: 97vh;
-  background-image: url('./bg.jpg');
+  background-image: url('../../../static/glass.jpg');
   background-position: center top;
   background-size: cover;
   position: relative;

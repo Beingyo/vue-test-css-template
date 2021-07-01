@@ -1,87 +1,85 @@
 <template>
 	<div class="container">
-		<div class="box">
-			<div class="border"></div>
+		<div class="book">
+			<div class="center" style="--open: 3; --close: 3;"></div>
+			<div class="first" style="--open: 1; --close: 5;"></div>
+			<div class="page" style="--open: 2; --close: 4;"><img :src="img1" alt=""></div>
+			<div class="page" style="--open: 3; --close: 3;"><img :src="img2" alt=""></div>
+			<div class="page" style="--open: 4; --close: 2;"><img :src="img3" alt=""></div>
+			<div class="page" style="--open: 5; --close: 1;"><img :src="img4" alt=""></div>
+			<div class="last" style="--open: 3; --close: 3;"></div>
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
+	data() {
+		return {
+			img1: require('@/assets/magnifier.jpg'),
+			img2: require('@/assets/night.png'),
+			img3: require('@/../static/CSSBox.jpg'),
+			img4: require('@/../static/glass.jpg'),
+		}
+	},
 	created() {},
 	methods: {},
 }
 </script>
 
 <style lang="scss" scoped>
-$color: #fff;
-$hover_color: #ffffff1a;
+$border_width: 15px;
+$border_color:#576574;
+$top_height: -15px;
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 97vh;
-	background: #000;
 }
-.box {
-	position: relative;
+.book {
 	width: 200px;
-	height: 200px;
+	height: 350px;
+	transform-style: preserve-3d;
+	transition: 0.8s;
+	perspective: 1000px;
 }
-.border {
+.book:hover {
+	transform: translateX(50px);
+}
+.page, .first, .last, .center {
+	width: 200px;
+	height: 350px;
 	position: absolute;
-	transition: 1s;
+	transform-origin: left;
+	transition: calc(var(--close) * 0.3s);
+	z-index: calc(var(--close) * 99);
+	background: $border_color;
+}
+.first img,
+.page img,
+.last img {
 	width: 100%;
 	height: 100%;
-	border: 3px solid $color;
-	border-radius: 38% 82% 75% 37% / 41% 74% 50% 70%;
-	text-align: left;
-	animation: change 10s infinite linear;
+	object-fit:cover;
 }
-.border::after,
-.border::before {
-	content: '';
-	position: absolute;
-	transition: 1s;
-	width: 100%;
-	height: 100%;
-	border: 3px solid $color;
-	color: $color;
-	border-radius: 38% 82% 75% 37% / 41% 74% 50% 70%;
-}
-.border::after {
-	animation: change 8s infinite linear;
-}
-.border::before {
-	animation: change 7s infinite linear;
-}
-@keyframes change {
-	0% {
-		transform: rotateZ(0);
-		border-radius: 38% 62% 63% 37%/ 41% 44% 56% 59%;
-	}
-	50% {
-		transform: rotateZ(180deg);
-		border-radius: 38% 82% 75% 37% / 41% 74% 50% 70%;
-	}
-  100% {
-		transform: rotateZ(360deg);
-		border-radius: 38% 62% 63% 37%/ 41% 44% 56% 59%;
-	}
-}
-// .box:hover .border,
-// .box:hover .border::after,
-// .box:hover .border::before {
-//   background: $hover_color;
-// }
 
-.box:hover .border::before {
-  background: rgba(255, 0, 0, 0.3);
+.first, .last, .center {
+	border: solid $border_width $border_color;
+	border-left: $border_color 0 solid;
+	top: $top_height;
+	border-radius: 0 20px 20px 0;
 }
-.box:hover .border::after {
-  background: rgba(0, 0, 255, 0.3);
+.book:hover .page,
+.book:hover .first {
+	transform: rotateY(-180deg);
+	transition: calc(var(--open) * 0.4s);
+	z-index: calc(var(--open) * 99);
 }
-.box:hover .border {
-  background: rgba(0, 255, 0, 0.3);
+.book:hover .center,
+.book:hover .last {
+	transition: calc(var(--open) * 0.4s);
+	border-left: $border_color $border_width solid;
 }
+
 </style>
