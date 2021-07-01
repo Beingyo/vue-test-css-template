@@ -63,7 +63,6 @@ $border_color: rgb(150, 20, 100);
 		transform:translateZ(-700px) scale(.1);
 	}
 	100% {
-		/* 当元素离你越近的时候，透明度就越高 */
 		opacity: 1;
 		// /* transformZ越大时，元素就离你越近，
 		// scale是缩放，在元素离你越来越近的同时也越来越大 */

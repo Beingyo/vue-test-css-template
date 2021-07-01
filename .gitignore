@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 package.json
 yarn.lock
+.svn
 
 # Editor directories and files
 .idea

@@ -34,7 +34,7 @@ export default new Router({
 
     {path: '/split', name: 'split', meta: {title: '分裂'}, component: () => import('@/page/split/index')},
     {path: '/book', name: 'book', meta: {title: '翻页'}, component: () => import('@/page/book/index')},
-    // {path: '/magnifier', name: 'magnifier', meta: {title: '放大镜'}, component: () => import('@/page/magnifier/index')},
+    {path: '/tunnel', name: 'tunnel', meta: {title: '隧道'}, component: () => import('@/page/tunnel/index')},
     // {path: '/solidText', name: 'solidText', meta: {title: '立体文字'}, component: () => import('@/page/solidText/index')},
     // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},
 

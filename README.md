@@ -5,11 +5,16 @@
 
 3、install 如果遇到 node-sass@4.14.1 错误，可以先执行 npm config set sass_binary_site=https://npm.taobao.org/mirrors/node-sass 对 node-sass 的数据源设置再继续 install
 
-### 1.0.0(2021-06-30)
+
+### 1.2(2021-07-01)
+
+例子：翻页、隧道
+
+### 1.1(2021-06-30)
 
 例子：悬浮发光、分裂
 
-### 1.0.0(2021-06-29)
+### 1.0(2021-06-29)
 
 初次更新
 
@@ -104,3 +109,7 @@
 #### 翻页
 
 ![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/book.png)
+
+#### 隧道
+
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/tunnel.png)
