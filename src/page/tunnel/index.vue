@@ -1,21 +1,7 @@
 <template>
 	<div class="container">
 		<div class="box">
-			<div class="item" style="--delay: 1"></div>
-			<div class="item" style="--delay: 2"></div>
-			<div class="item" style="--delay: 3"></div>
-			<div class="item" style="--delay: 4"></div>
-			<div class="item" style="--delay: 5"></div>
-			<div class="item" style="--delay: 6"></div>
-			<div class="item" style="--delay: 7"></div>
-			<div class="item" style="--delay: 8"></div>
-			<div class="item" style="--delay: 9"></div>
-			<div class="item" style="--delay: 10"></div>
-			<div class="item" style="--delay: 11"></div>
-			<div class="item" style="--delay: 12"></div>
-			<div class="item" style="--delay: 13"></div>
-			<div class="item" style="--delay: 14"></div>
-			<div class="item" style="--delay: 15"></div>
+			<div class="item" v-for="(index, item) in 15" :key="index" :style="{'--delay': index}"></div>
 		</div>
 	</div>
 </template>

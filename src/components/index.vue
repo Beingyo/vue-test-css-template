@@ -36,6 +36,22 @@
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="split" @click="routeLink">分裂</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="book" @click="routeLink">翻页</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="tunnel" @click="routeLink">隧道</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="card" @click="routeLink">卡片</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="mouse" @click="routeLink">鼠标跟踪</span></div></el-col>
+    </el-row>
+
+    <el-row :gutter="10">
+      <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="scroll" @click="routeLink">滚动视差</span></div></el-col>
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+    </el-row>
+
+    <el-row :gutter="10">
+      <!-- <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="test" @click="routeLink">测试</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
     </el-row>
