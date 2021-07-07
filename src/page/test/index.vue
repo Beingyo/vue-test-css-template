@@ -1,7 +1,19 @@
 <template>
 	<div class="container">
-		<div class="box">
-			
+		<div class="center-point"></div>
+		<div class="surround-box">
+			<div class="circle circle1">1</div>
+			<div class="circle circle2">2</div>
+			<div class="circle circle3">3</div>
+			<div class="circle circle4">4</div>
+			<div class="circle circle5">5</div>
+			<div class="circle circle6">6</div>
+			<div class="circle circle7">7</div>
+			<div class="circle circle8">8</div>
+			<div class="circle circle9">9</div>
+			<div class="circle circle10">10</div>
+			<div class="circle circle11">11</div>
+			<div class="circle circle12">12</div>
 		</div>
 	</div>
 </template>
@@ -23,8 +35,77 @@ export default {
 	align-items: center;
 	height: 97vh;
 }
-.box {
-	height: 200vh;
+.surround-box,
+.center-point {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	margin-top: -10px;
+	border-radius: 50%;
+	background-color: #000;
 }
-
+.circle {
+	/* 这里一定要绝对定位，这样位置才能铺开来 */
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;
+}
+.circle1 {
+	background-color: red;
+	/* rotateZ控制方向，每个元素旋转30度，12个元素刚好360度。translateY控制每个元素距中心点的距离 */
+	transform: rotateZ(30deg) translateY(80px);
+}
+.circle2 {
+	background-color: orange;
+	transform: rotateZ(60deg) translateY(80px);
+}
+.circle3 {
+	background-color: yellow;
+	transform: rotateZ(90deg) translateY(80px);
+}
+.circle4 {
+	background-color: green;
+	transform: rotateZ(120deg) translateY(80px);
+}
+.circle5 {
+	background-color: seagreen;
+	transform: rotateZ(150deg) translateY(80px);
+}
+.circle6 {
+	background-color: blue;
+	transform: rotateZ(180deg) translateY(80px);
+}
+.circle7 {
+	background-color: purple;
+	transform: rotateZ(210deg) translateY(80px);
+}
+.circle8 {
+	background-color: lightsalmon;
+	transform: rotateZ(240deg) translateY(80px);
+}
+.circle9 {
+	background-color: deeppink;
+	transform: rotateZ(270deg) translateY(80px);
+}
+.circle10 {
+	background-color: lightyellow;
+	transform: rotateZ(300deg) translateY(80px);
+}
+.circle11 {
+	background-color: lightgreen;
+	transform: rotateZ(330deg) translateY(80px);
+}
+.circle12 {
+	background-color: lightslategrey;
+	transform: rotateZ(360deg) translateY(80px);
+}
 </style>

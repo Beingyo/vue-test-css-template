@@ -46,6 +46,7 @@ export default {
 	background-size: cover;
 	background-position: 50% 50%;
 	font: 900 20vw '';
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	position: relative;
