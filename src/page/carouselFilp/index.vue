@@ -15,14 +15,24 @@
 export default {
 	data() {
 		return {
-			rows: 20,
-			cols: 20
+			rows: 1,
+			cols: 1
 		}
+	},
+	mounted() {
+		this.init()
 	},
 	created() {
 		this.interval()
 	},
 	methods: {
+		init() {
+			let box = this.$refs.box
+			let height = this.$refs.imgBox[0].offsetHeight
+			let width = this.$refs.imgBox[0].offsetWidth
+			this.rows = box.offsetHeight / height
+			this.cols = box.offsetWidth / width
+		},
 		interval() {
 			let count = 1
 			setInterval(() => {
@@ -52,6 +62,7 @@ $img_height: 17px;
 .box {
 	width: $box_width;
 	height: $box_height;
+	position: absolute;
 }
 .imgBox {
 	width: $img_width;
@@ -63,8 +74,10 @@ $img_height: 17px;
 	height: 100%;
 	position: absolute;
 	transform-style: preserve-3d;
-	left: calc(var(--col) * 30px);
-	top: calc(var(--row) * 17px);
+	// left: calc(var(--col) * 30px);
+	// top: calc(var(--row) * 17px);
+	left: calc(var(--col) * #{$img_width});
+	top: calc(var(--row) * #{$img_height});
 	transition: .5s linear calc(calc(var(--col) + var(--row)) * .1s);
 }
 .front {
@@ -73,7 +86,8 @@ $img_height: 17px;
 	position: absolute;
 	background-image: url('../../../static/glass.jpg');
 	background-size: $box_width $box_height;
-	background-position: calc(var(--col) * -30px) calc(var(--row) * -17px);
+	// background-position: calc(var(--col) * -30px) calc(var(--row) * -17px);
+	background-position: calc(var(--col) * -#{$img_width}) calc(var(--row) * -#{$img_height});
 	transform: rotateY(0deg);
 }
 .back {
@@ -82,7 +96,8 @@ $img_height: 17px;
 	position: absolute;
 	background-image: url('../../../static/card.jpg');
 	background-size: $box_width $box_height;
-	background-position: calc(var(--col) * -30px) calc(var(--row) * -17px);
+	// background-position: calc(var(--col) * -30px) calc(var(--row) * -17px);
+	background-position: calc(var(--col) * -#{$img_width}) calc(var(--row) * -#{$img_height});
 	transform: rotateY(180deg);
 }
 </style>
