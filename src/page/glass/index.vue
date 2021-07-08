@@ -17,7 +17,7 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 97vh;
+  height: 100vh;
   background-image: url('../../../static/glass.jpg');
   background-position: center top;
   background-size: cover;

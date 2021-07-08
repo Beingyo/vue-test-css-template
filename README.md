@@ -5,6 +5,10 @@
 
 3、install 如果遇到 node-sass@4.14.1 错误，可以先执行 npm config set sass_binary_site=https://npm.taobao.org/mirrors/node-sass 对 node-sass 的数据源设置再继续 install
 
+### 1.6.0(2021-07-08)
+
+例子：图片翻面
+
 ### 1.5.0(2021-07-07)
 
 例子：绕点旋转
@@ -140,3 +144,7 @@
 #### 绕点旋转
 
 ![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/rotate.png)
+
+#### 图片翻面
+
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/carouselFilp.png)

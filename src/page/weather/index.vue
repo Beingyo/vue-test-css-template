@@ -37,7 +37,7 @@ $sky: rgba(20, 107, 287, 0.8);
 
 .container {
   width: 100%;
-  height: 97vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

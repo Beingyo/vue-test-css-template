@@ -39,7 +39,8 @@ $text: rgba(0, 0, 0, 0.25);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 97vh;
+	height: 100vh;
+	background: rgb(211, 211, 211);
 }
 .box {
 	position: relative;

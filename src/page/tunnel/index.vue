@@ -24,7 +24,7 @@ $border_color: rgb(150, 20, 100);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 97vh;
+	height: 100vh;
 	background-color: $bg_color;
 }
 .box {

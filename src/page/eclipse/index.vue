@@ -12,7 +12,7 @@ export default {};
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  height: 97vh;
+  height: 100vh;
   /* 天空默认颜色 */
   background: skyblue;
   /* 动画 */

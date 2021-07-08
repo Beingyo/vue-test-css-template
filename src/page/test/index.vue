@@ -1,19 +1,18 @@
 <template>
 	<div class="container">
-		<div class="center-point"></div>
-		<div class="surround-box">
-			<div class="circle circle1">1</div>
-			<div class="circle circle2">2</div>
-			<div class="circle circle3">3</div>
-			<div class="circle circle4">4</div>
-			<div class="circle circle5">5</div>
-			<div class="circle circle6">6</div>
-			<div class="circle circle7">7</div>
-			<div class="circle circle8">8</div>
-			<div class="circle circle9">9</div>
-			<div class="circle circle10">10</div>
-			<div class="circle circle11">11</div>
-			<div class="circle circle12">12</div>
+		<div class="box" ref="box">
+			<div class="imgBox" ref="imgBox">
+				<div class="test">
+					<div class="front"></div>
+					<div class="back"></div>
+				</div>
+			</div>
+			<div class="imgBoxA" ref="imgBox">
+				<div class="test">
+					<div class="frontA"></div>
+					<div class="backA"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -21,91 +20,135 @@
 <script>
 export default {
 	data() {
-		return {}
+		return {
+			rows: 2,
+			cols: 2
+		}
 	},
-	created() {},
-	methods: {},
+	mounted() {
+		// this.filp()
+	},
+	methods: {
+		filp() {
+			let box = this.$refs.box
+			let height = this.$refs.imgBox[0].offsetHeight
+			let width = this.$refs.imgBox[0].offsetWidth
+			this.rows = box.offsetHeight / height
+			this.cols = box.offsetWidth / width
+
+
+			for(let row = 0; row < this.rows - 1; row ++) {
+				for(let col = 0; col < this.cols; col ++) {
+					this.$refs[ 'front' +  row + '_' + col ][0].style.left = col * width + 'px'
+					this.$refs[ 'front' +  row + '_' + col ][0].style.top = row * height  + 'px'
+					this.$refs[ 'front' +  row + '_' + col ][0].style.backgroundPosition = `${-width * col}px ${-height * row}px`
+					this.$refs[ 'back' +  row + '_' + col ][0].style.left = col * width + 'px'
+					this.$refs[ 'back' +  row + '_' + col ][0].style.top = row * height  + 'px'
+					this.$refs[ 'back' +  row + '_' + col ][0].style.backgroundPosition = `${-width * col}px ${-height * row}px`
+				}
+			}
+			// for(let i = 0; i < 20 - 1; i ++) {
+			// 	for(let j = 0; j < 20; j ++) {
+			// 		let imgBox = document.createElement('div')
+			// 		imgBox.className = 'imgBox'
+			// 		imgBox.style.height = height + 'px'
+			// 		imgBox.style.width = width + 'px'
+			// 		imgBox.style.left = j = width + 'px'
+			// 		let front = document.createElement('div')
+			// 		front.className = 'test'
+			// 		imgBox.appendChild(front)
+			// 		let back = document.createElement('div')
+			// 		back.className = 'back'
+			// 		imgBox.appendChild(back)
+			// 		box.appendChild(imgBox)
+			// 	}
+			// }
+		},
+	},
 }
 </script>
 
 <style lang="scss" scoped>
+$box_width: 600px;
+$box_height: 340px;
+$img_width: 30px;
+$img_height: 17px;
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 97vh;
+	height: 100vh;
 }
-.surround-box,
-.center-point {
+.box {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 20px;
-	height: 20px;
-	margin-left: -10px;
-	margin-top: -10px;
-	border-radius: 50%;
-	background-color: #000;
+	width: $box_width;
+	height: $box_height;
+	// min-width: $box_width;
+	// min-height: $box_height;
 }
-.circle {
-	/* 这里一定要绝对定位，这样位置才能铺开来 */
+.imgBox {
+	width: $img_width;
+	height: $img_height;
 	position: absolute;
-	top: -10px;
-	left: -10px;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	border-radius: 50%;
-	text-align: center;
-	color: #fff;
+	transform-style: preserve-3d;
+	transition: 5s;
+	// transform: rotateY(180deg);
 }
-.circle1 {
-	background-color: red;
-	/* rotateZ控制方向，每个元素旋转30度，12个元素刚好360度。translateY控制每个元素距中心点的距离 */
-	transform: rotateZ(30deg) translateY(80px);
+.test {
+	// width: $img_width;
+	// height: $img_height;
+	// position: absolute;
+	// transform-style: preserve-3d;
+	// transform-style: preserve-3d;
+	// transform: rotateY(180deg);
 }
-.circle2 {
-	background-color: orange;
-	transform: rotateZ(60deg) translateY(80px);
+.front {
+	width: 100%;
+	height: 100%;
+	background-image: url('../../../static/glass.jpg');
+	background-size: $box_width $box_height;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(0deg);
 }
-.circle3 {
-	background-color: yellow;
-	transform: rotateZ(90deg) translateY(80px);
+.back {
+	width: 100%;
+	height: 100%;
+	background-image: url('../../../static/card.jpg');
+	background-size: $box_width $box_height;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(180deg);
 }
-.circle4 {
-	background-color: green;
-	transform: rotateZ(120deg) translateY(80px);
+.imgBoxA {
+	width: $img_width;
+	height: $img_height;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: 5s;
+	left: 60px;
+	transform: rotateY(180deg);
 }
-.circle5 {
-	background-color: seagreen;
-	transform: rotateZ(150deg) translateY(80px);
+.frontA {
+	width: 100%;
+	height: 100%;
+	background-image: url('../../../static/glass.jpg');
+	background-size: $box_width $box_height;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(0deg);
 }
-.circle6 {
-	background-color: blue;
-	transform: rotateZ(180deg) translateY(80px);
-}
-.circle7 {
-	background-color: purple;
-	transform: rotateZ(210deg) translateY(80px);
-}
-.circle8 {
-	background-color: lightsalmon;
-	transform: rotateZ(240deg) translateY(80px);
-}
-.circle9 {
-	background-color: deeppink;
-	transform: rotateZ(270deg) translateY(80px);
-}
-.circle10 {
-	background-color: lightyellow;
-	transform: rotateZ(300deg) translateY(80px);
-}
-.circle11 {
-	background-color: lightgreen;
-	transform: rotateZ(330deg) translateY(80px);
-}
-.circle12 {
-	background-color: lightslategrey;
-	transform: rotateZ(360deg) translateY(80px);
+.backA {
+	width: 100%;
+	height: 100%;
+	background-image: url('../../../static/card.jpg');
+	background-size: $box_width $box_height;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(180deg);
 }
 </style>

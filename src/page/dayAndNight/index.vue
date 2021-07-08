@@ -59,7 +59,7 @@ $day_width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 97vh;
+  height: 100vh;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;

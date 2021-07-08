@@ -70,7 +70,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 97vh;
+	height: 100vh;
 }
 .box {
 	width: 800px;

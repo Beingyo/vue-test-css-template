@@ -27,7 +27,7 @@ $red: #99479c;
 $speed: cubic-bezier(.27,1,.36,1);
 .container {
   position: relative;
-  height: 97vh;
+  height: 100vh;
 }
 .item {
   width: 100%;

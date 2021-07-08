@@ -28,7 +28,7 @@ $line_hight: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 97vh;
+	height: 100vh;
 	background-color: rgb(60, 60, 70);
 }
 .box {
