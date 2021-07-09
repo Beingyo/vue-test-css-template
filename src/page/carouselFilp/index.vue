@@ -3,8 +3,10 @@
 		<div class="box" ref="box">
 			<div class="imgBox" ref="imgBox" v-for="(imgBox, row) in rows" :key="row">
 				<div class="img" :style="{'--col':col, '--row':row}" :ref="'img' + row + '_' + col" v-for="(item, col) in cols" :key="col">
-					<div class="front"></div>
-					<div class="back"></div>
+					<div class="first" :ref="'first' + row + '_' + col"></div>
+					<div class="second" :ref="'second' + row + '_' + col"></div>
+					<div class="third" :ref="'third' + row + '_' + col"></div>
+					<div class="forth" :ref="'forth' + row + '_' + col"></div>
 				</div>
 			</div>
 		</div>
@@ -34,11 +36,17 @@ export default {
 			this.cols = box.offsetWidth / width
 		},
 		interval() {
-			let count = 1
+			let count = 0
+			let rotate = 0
 			setInterval(() => {
+				rotate = count % 2
 				for(let row = 0; row < this.rows; row ++) {
 					for(let col = 0; col < this.cols; col ++) {
-						this.$refs[ 'img' +  row + '_' + col ][0].style.transform = `rotateY(${(count % 2) * 180}deg)`
+						// this.$refs[ 'img' +  row + '_' + col ][0].style.transform = `rotateY(${(count % 2) * 180}deg)`
+						this.$refs[ 'first' +  row + '_' + col ][0].style.transform = `rotateY(${rotate * 180}deg) translateZ(${(count + 2) % 4}px)`
+						this.$refs[ 'second' +  row + '_' + col ][0].style.transform = `rotateY(${(rotate + 1 ) * 180}deg) translateZ(${(count + 2) % 4}px)`
+						this.$refs[ 'third' +  row + '_' + col ][0].style.transform = `rotateY(${rotate * 180}deg) translateZ(${count % 4}px)`
+						this.$refs[ 'forth' +  row + '_' + col ][0].style.transform = `rotateY(${(rotate + 1) * 180}deg) translateZ(${count % 4}px)`
 					}
 				}
 				count++
@@ -74,30 +82,33 @@ $img_height: 17px;
 	height: 100%;
 	position: absolute;
 	transform-style: preserve-3d;
-	// left: calc(var(--col) * 30px);
-	// top: calc(var(--row) * 17px);
 	left: calc(var(--col) * #{$img_width});
 	top: calc(var(--row) * #{$img_height});
+	// transition: .5s linear calc(calc(var(--col) + var(--row)) * .1s);
+	// transform: rotateY(0deg);
+}
+.first,.second,.third,.forth {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-size: $box_width $box_height;
+	background-position: calc(var(--col) * -#{$img_width}) calc(var(--row) * -#{$img_height});
 	transition: .5s linear calc(calc(var(--col) + var(--row)) * .1s);
 }
-.front {
-	width: 100%;
-	height: 100%;
-	position: absolute;
+.first {
 	background-image: url('../../../static/glass.jpg');
-	background-size: $box_width $box_height;
-	// background-position: calc(var(--col) * -30px) calc(var(--row) * -17px);
-	background-position: calc(var(--col) * -#{$img_width}) calc(var(--row) * -#{$img_height});
-	transform: rotateY(0deg);
+	transform: rotateY(0deg) translateZ(2px);
 }
-.back {
-	width: 100%;
-	height: 100%;
-	position: absolute;
+.second {
 	background-image: url('../../../static/card.jpg');
-	background-size: $box_width $box_height;
-	// background-position: calc(var(--col) * -30px) calc(var(--row) * -17px);
-	background-position: calc(var(--col) * -#{$img_width}) calc(var(--row) * -#{$img_height});
-	transform: rotateY(180deg);
+	transform: rotateY(180deg) translateZ(2px);
+}
+.third {
+	background-image: url('../../../static/CSSBox.jpg');
+	transform: rotateY(0deg) translateZ(1px);
+}
+.forth {
+	background-image: url('../../../static/scroll.jpg');
+	transform: rotateY(180deg) translateZ(1px);
 }
 </style>
