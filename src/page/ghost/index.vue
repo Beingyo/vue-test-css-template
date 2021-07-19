@@ -226,6 +226,4 @@
         transform: translateX(-45%) scale(0.5);
     }
 }
-
-
 </style>

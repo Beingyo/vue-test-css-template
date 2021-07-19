@@ -35,7 +35,7 @@ export default {};
 .left {
   width: 100px;
   height: 100px;
-  background: #e70505;
+  background: #c57d7d;
   animation: move 4s cubic-bezier(.25,.61,.75,.37) infinite alternate;
 }
 .right {

@@ -42,10 +42,10 @@ export default new Router({
     {path: '/rotate', name: 'rotate', meta: {title: '绕点旋转'}, component: () => import('@/page/rotate/index')},
     {path: '/carouselFilp', name: 'carouselFilp', meta: {title: '图片翻面'}, component: () => import('@/page/carouselFilp/index')},
     {path: '/spotlight', name: 'spotlight', meta: {title: '聚光灯'}, component: () => import('@/page/spotlight/index')},
-    // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},
+    {path: '/block', name: 'block', meta: {title: '方块'}, component: () => import('@/page/block/index')},
 
-    // {path: '/scroll', name: 'scroll', meta: {title: '滚动视差'}, component: () => import('@/page/scroll/index')},
-    // {path: '/rotate', name: 'rotate', meta: {title: '绕点旋转'}, component: () => import('@/page/rotate/index')},
+    {path: '/borderSVG', name: 'borderSVG', meta: {title: 'SVG边框动画'}, component: () => import('@/page/borderSVG/index')},
+    {path: '/borderAnimation', name: 'borderAnimation', meta: {title: '边框动画'}, component: () => import('@/page/borderAnimation/index')},
     // {path: '/carouselFilp', name: 'carouselFilp', meta: {title: '图片翻面'}, component: () => import('@/page/carouselFilp/index')},
     // {path: '/spotlight', name: 'spotlight', meta: {title: '聚光灯'}, component: () => import('@/page/spotlight/index')},
     // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},

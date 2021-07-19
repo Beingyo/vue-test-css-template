@@ -45,12 +45,12 @@
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="rotate" @click="routeLink">绕点旋转</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="carouselFilp" @click="routeLink">图片翻面</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="spotlight" @click="routeLink">聚光灯</span></div></el-col>
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="block" @click="routeLink">方块</span></div></el-col>
     </el-row>
 
     <el-row :gutter="10">
-      <!-- <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="test" @click="routeLink">测试</span></div></el-col> -->
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="borderSVG" @click="routeLink">SVG边框动画</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="borderAnimation" @click="routeLink">边框动画</span></div></el-col>
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
@@ -98,21 +98,11 @@ export default {
 .el-col {
   border-radius: 4px;
 }
-.bg-purple-dark {
-  background: #99a9bf;
-}
 .bg-purple {
   background: #eaf0f5;
-}
-.bg-purple-light {
-  background: #e5e9f2;
 }
 .grid-content {
   border-radius: 4px;
   min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
 }
 </style>

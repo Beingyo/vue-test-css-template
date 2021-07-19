@@ -1,15 +1,18 @@
 <template>
 	<div class="container">
-		<div class="box" ref="box">
-			
-		</div>
+		<div v-for="(item,index) in  10" :key="index">{{ index }}</div>
 	</div>
 </template>
 
 <script>
 export default {
-	data() {return {}},
-	mounted() {},
+	data() {
+		return {
+			styleString: { color: 'orange' },
+		}
+	},
+	created() {
+	},
 	methods: {},
 }
 </script>
@@ -20,8 +23,13 @@ export default {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	background: rgb(211, 211, 211);
+	flex-direction: column;
 }
-.box {
-	display: inline;
+.test1 {
+	color: red;
+}
+.test2 {
+	color: blue;
 }
 </style>

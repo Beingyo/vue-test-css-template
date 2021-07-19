@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="box" ref="box">
 			<img :src="imgUrl" width="100%" alt="" />
-			<div class="move" ref="move" @mousemove="mousemove">
+			<div class="move" ref="move" @mousemove="mousemove()">
 				<img :src="imgUrl" ref="img" alt="" />
 			</div>
 		</div>
@@ -29,10 +29,8 @@ export default {
 			let halfWidth = this.$refs.move.clientWidth / 2
 			let halfHeight = this.$refs.move.clientHeight / 2
 			// 放大图片与显示图片的比例大小
-			const percentWidth =
-				this.$refs.img.clientWidth / this.$refs.box.clientWidth
-			const percentHeight =
-				this.$refs.img.clientHeight / this.$refs.box.clientHeight
+			const percentWidth = this.$refs.img.clientWidth / this.$refs.box.clientWidth
+			const percentHeight = this.$refs.img.clientHeight / this.$refs.box.clientHeight
 			// 可移动的最小最大距离
 			let minMoveWidth = left + halfWidth
 			let maxMoveWidth = left + this.$refs.box.clientWidth - halfWidth
@@ -45,20 +43,16 @@ export default {
 			} else if (mouseWidth >= maxMoveWidth) {
 				this.$refs.move.style.right = 0 + 'px'
 			} else {
-				this.$refs.move.style.left =
-					mouseWidth - left - halfWidth + 'px'
-				this.$refs.img.style.left =
-					-((mouseWidth - left) * percentWidth - halfWidth) + 'px'
+				this.$refs.move.style.left = mouseWidth - left - halfWidth + 'px'
+				this.$refs.img.style.left = -((mouseWidth - left) * percentWidth - halfWidth) + 'px'
 			}
 			if (mouseHeight <= minMoveHeight) {
 				this.$refs.move.style.top = 0 + 'px'
 			} else if (mouseHeight >= maxMoveHeight) {
 				this.$refs.move.style.bottom = 0 + 'px'
 			} else {
-				this.$refs.move.style.top =
-					mouseHeight - top - halfHeight + 'px'
-				this.$refs.img.style.top =
-					-((mouseHeight - top) * percentHeight - halfHeight) + 'px'
+				this.$refs.move.style.top = mouseHeight - top - halfHeight + 'px'
+				this.$refs.img.style.top = -((mouseHeight - top) * percentHeight - halfHeight) + 'px'
 			}
 		},
 	},
