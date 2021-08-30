@@ -1,4 +1,6 @@
 <template>
+<div>
+  <!-- JS实现 -->
   <div class="container" @mousemove="mouseMove" @mouseup="mouseUp">
     <div class="box" ref="box">
       <div class="day" ref="day">
@@ -14,6 +16,15 @@
         </div>
       </div>
     </div>
+  </div>
+  <!-- CSS实现 -->
+  <div class="container">
+    <div class='pictureNight'>
+      <div class='pictureDay'>
+          <div readonly class='resizeElement'></div>
+      </div>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -54,7 +65,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* JS实现 */
 $day_width: 100px;
+$box_width: 977px;
+$box_height: 550px;
 .container {
   display: flex;
   justify-content: center;
@@ -67,8 +81,8 @@ $day_width: 100px;
   user-select: none;
 }
 .box {
-  width: 977px;
-  height: 550px;
+  width: $box_width;
+  height: $box_height;
   // border: 1px solid #000;
   position: relative;
 }
@@ -111,5 +125,51 @@ $day_width: 100px;
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
+}
+
+
+/* CSS实现 */
+.pictureNight {
+    position: relative;
+    background-image: url('../../assets/night.png');
+    background-size: cover;
+    width: $box_width;
+    height: $box_height;
+    overflow: hidden;
+}
+.pictureDay {
+    position: absolute;
+    background-image: url('../../assets/day.png');
+    background-size: cover;
+    height: $box_height;
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: $box_width;
+}
+.pictureDay:before {
+    content: "◀ ▶";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    color: white;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: $box_height;
+}
+.resizeElement {
+    resize: horizontal;
+    overflow: scroll;
+    opacity: 0;
+    position: relative;
+    top: 50%;
+    left: 0px;
+    height: 16px;
+    max-width: $box_width;
+    min-width: 31px;
+    width: 150px;
+    transform: scaleY(35);
+    transform-origin: center center;
 }
 </style>

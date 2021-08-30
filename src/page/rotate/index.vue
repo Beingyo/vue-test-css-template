@@ -69,14 +69,8 @@ $box_height: 200px;
 	color: rgb(255, 255, 255);
 	-webkit-text-stroke: 1px rgb(0, 0, 0);
 	text-shadow: 0 0 5px rgb(0, 0, 0);
-	text-shadow:
-    1px 1px 0 $text,
-    2px 2px 0 $text,
-    3px 3px 0 $text,
-    4px 4px 0 $text,
-    5px 5px 0 $text,
-    6px 6px 0 $text,
-    7px 7px 0 $text;
+	text-shadow: 1px 1px 0 $text, 2px 2px 0 $text, 3px 3px 0 $text,
+		4px 4px 0 $text, 5px 5px 0 $text, 6px 6px 0 $text, 7px 7px 0 $text;
 }
 .top,
 .bottom,
@@ -86,6 +80,11 @@ $box_height: 200px;
 .back {
 	position: absolute;
 	background: $bg_color;
+	// -webkit-box-reflect: below 20px -webkit-linear-gradient(
+	// 	transparent,
+	// 	transparent 30%,
+	// 	rgba(255, 255, 255, 0.6)
+	// );
 }
 .top,
 .bottom {
@@ -132,10 +131,10 @@ $box_height: 200px;
 }
 @keyframes rotate {
 	0% {
-		transform:rotateX(-10deg) rotateY(0deg);
+		transform: rotateX(-10deg) rotateY(0deg);
 	}
 	100% {
-		transform:rotateX(-10deg) rotateY(-360deg);
+		transform: rotateX(-10deg) rotateY(-360deg);
 	}
 }
 </style>

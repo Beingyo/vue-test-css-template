@@ -4,16 +4,17 @@
 			<div class="item">
 				<div class="top"></div>
 				<div class="bottom"></div>
-				<div class="left"></div>
+				<div class="left">
+					<div class="wave"></div>
+				</div>
 				<div class="right">
 					<div class="wave"></div>
 				</div>
-				<div class="front"></div>
-				<div class="back"></div>
-				
-				<!-- <div class="front">
-					<div class="wave">
-					</div> -->
+				<div class="front">
+					<div class="wave"></div>
+				</div>
+				<div class="back">
+					<div class="wave"></div>
 				</div>
 			</div>
 		</div>
@@ -32,8 +33,9 @@ export default {
 
 <style lang="scss" scoped>
 $translate: 350px;
-$bg_color: rgba(0, 0, 0, 0.02);
-$border_color: rgba(0, 0, 0, 0.5);
+$bg_color: rgb(194, 191, 191);
+$border_color: rgb(0, 0, 0);
+$bg_water: rgb(151, 204, 253);
 $box_length: 180px;
 $box_width: 180px;
 $box_height: 180px;
@@ -68,6 +70,7 @@ $box_height: 180px;
 	position: absolute;
 	background: $bg_color;
 	overflow: hidden;
+	opacity: 0.5;
 }
 .top,
 .bottom {
@@ -96,6 +99,7 @@ $box_height: 180px;
 	bottom: 0;
 	transform-origin: bottom;
 	transform: rotateX(-90deg) translateY(calc(#{$box_width} / 2));
+	background: $bg_water;
 }
 .left {
 	left: 0;
@@ -114,58 +118,70 @@ $box_height: 180px;
 	transform: rotateY(180deg) translateZ(calc(#{$box_width} / 2));
 }
 
-.wave {
-	position: absolute;
-	height: 180px;
-	width: 180px;
-	background: $bg_color;
-	left: 97%;
-	border-radius: 45% 47% 44% 42%;
-	text-align: left;
+.front .wave,
+.right .wave,
+.back .wave,
+.left .wave {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient($bg_color, $bg_color 50%, $bg_water 50%, $bg_water 100%);
 }
-.wave::after,
-.wave::before {
+
+.front .wave::after,
+.front .wave::before,
+.right .wave::after,
+.right .wave::before,
+.back .wave::after,
+.back .wave::before,
+.left .wave::after,
+.left .wave::before  {
 	content: '';
 	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-.wave::after {
-	border-radius: 38% 46% 43% 47%;
-	background: $bg_color;
-	transform: translateY(-60px);
-}
-.wave::before {
-	border-radius: 42% 46% 37% 40%;
-	background: $bg_color;
-	transform: translateY(60px);
+	height: 41%;
+	width: 41%;
+	top: 50%;
+	transform: translate(0,-50%) rotate(-45deg);
+	border-radius: 0% 100% 0% 100%;
 }
 
+.front .wave::after {
+	left: 0;
+	background: $bg_water;
+}
 
-// .wave {
-// 	position: absolute;
-// 	height: 180px;
-// 	width: 180px;
-// 	background: lightcyan;
-// 	left: 90%;
-// 	border-radius: 45% 47% 44% 42%;
-// 	text-align: left;
-// }
-// .wave::after,
-// .wave::before {
-// 	content: '';
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 100%;
-// }
-// .wave::after {
-// 	border-radius: 38% 46% 43% 47%;
-// 	background: rgb(255, 224, 252);
-// 	transform: rotate(-135deg);
-// }
-// .wave::before {
-// 	border-radius: 42% 46% 37% 40%;
-// 	background: rgb(233, 255, 224);
-// 	transform: rotate(135deg);
-// }
+.front .wave::before {
+	right: 0;
+	background: $bg_color;
+}
+
+.back .wave::after {
+	left: 0;
+	background: $bg_water;
+}
+
+.back .wave::before {
+	right: 0;
+	background: $bg_color;
+}
+
+.right .wave::after {
+	left: 0;
+	background: $bg_color;
+}
+
+.right .wave::before {
+	right: 0;
+	background: $bg_water;
+}
+
+.left .wave::after {
+	left: 0;
+	background: $bg_color;
+}
+
+.left .wave::before {
+	right: 0;
+	background: $bg_water;
+}
 </style>
