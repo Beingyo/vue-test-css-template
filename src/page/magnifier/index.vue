@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="box" ref="box">
 			<img :src="imgUrl" width="100%" alt="" />
-			<div class="move" ref="move" @mousemove="mousemove()">
+			<div class="move" ref="move" @mousemove="mousemove">
 				<img :src="imgUrl" ref="img" alt="" />
 			</div>
 		</div>
