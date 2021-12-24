@@ -13,7 +13,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-$snow-size: 3em;
+$snow-size: 2em;
 .container {
 	display: flex;
 	justify-content: center;
@@ -39,7 +39,6 @@ $snow-size: 3em;
 		width: $snow-size;
 		height: $snow-size;
 		border-radius: 100%;
-
 		&::after {
 			position: absolute;
 			content: '';

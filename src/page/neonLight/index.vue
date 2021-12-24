@@ -12,7 +12,10 @@
 
 <style lang="scss" scoped>
 .container {
-  display: inline;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 .neon {
   font-size: 50px;

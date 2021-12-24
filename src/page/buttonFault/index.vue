@@ -17,7 +17,10 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  display: inline;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 button, button::after{
   width: 300px;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow-x: hidden;">
     <el-row :gutter="10">
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="CSSBox" @click="routeLink">样式Box</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="buttonFault" @click="routeLink">故障按钮</span></div></el-col>
@@ -52,7 +52,7 @@
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="borderSVG" @click="routeLink">SVG边框动画</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="borderAnimation" @click="routeLink">边框动画</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="snows" @click="routeLink">雪地</span></div></el-col>
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="fontRains" @click="routeLink">字符雨</span></div></el-col> -->
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="reflection" @click="routeLink">倒影</span></div></el-col>
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
     </el-row>
 

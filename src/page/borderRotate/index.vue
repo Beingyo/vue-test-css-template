@@ -69,12 +69,6 @@ $hover_color: #ffffff1a;
 		border-radius: 38% 62% 63% 37%/ 41% 44% 56% 59%;
 	}
 }
-// .box:hover .border,
-// .box:hover .border::after,
-// .box:hover .border::before {
-//   background: $hover_color;
-// }
-
 .box:hover .border::before {
   background: rgba(255, 0, 0, 0.3);
 }
@@ -84,4 +78,9 @@ $hover_color: #ffffff1a;
 .box:hover .border {
   background: rgba(0, 255, 0, 0.3);
 }
+// .box:hover .border,
+// .box:hover .border::after,
+// .box:hover .border::before {
+//   background: $hover_color;
+// }
 </style>

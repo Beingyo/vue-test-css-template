@@ -22,7 +22,10 @@ export default {};
 $yellow_color: #f9f002;
 $border_color: #8ae66e;
 .container {
-  display: inline;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 .cyberpunk {
   padding: 5px;

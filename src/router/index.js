@@ -47,7 +47,7 @@ export default new Router({
     {path: '/borderSVG', name: 'borderSVG', meta: {title: 'SVG边框动画'}, component: () => import('@/page/borderSVG/index')},
     {path: '/borderAnimation', name: 'borderAnimation', meta: {title: '边框动画'}, component: () => import('@/page/borderAnimation/index')},
     {path: '/snows', name: 'snows', meta: {title: '雪地'}, component: () => import('@/page/snows/index')},
-    // {path: '/fontRains', name: 'fontRains', meta: {title: '字符雨'}, component: () => import('@/page/fontRains/index')},
+    {path: '/reflection', name: 'reflection', meta: {title: '倒影'}, component: () => import('@/page/reflection/index')},
     // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},
 
     {path: '/test', name: 'test', meta: {title: '测试'}, component: () => import('@/page/test/index')},
