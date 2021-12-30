@@ -1,5 +1,5 @@
 ## 介绍说明
-1、主要参考B站up主 [xiao-high](https://space.bilibili.com/410197001/) 和 [山羊の前端小窝](https://space.bilibili.com/266664645/)
+1、主要借鉴B站up主 [xiao-high](https://space.bilibili.com/410197001/) 和 [山羊の前端小窝](https://space.bilibili.com/266664645/)以及博客园[ChokCoco](https://home.cnblogs.com/u/coco1s/)
 
 2、记录一些CSS效果demo，随缘更新
 
