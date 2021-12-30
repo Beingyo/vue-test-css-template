@@ -70,8 +70,20 @@ export default {
         left: 0;
         right: 0;
         bottom: 0;
-        background: repeating-radial-gradient(circle at 50% 100%, transparent, transparent 5px, #3a77f6 5.2px, #3a77f6 6.2px, transparent 6.5px);
-        mask: radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 1), transparent 25%, transparent);
+        background: repeating-radial-gradient(
+			circle at 50% 100%,
+			transparent,
+			transparent 5px,
+			#3a77f6 5.2px,
+			#3a77f6 6.2px,
+			transparent 6.5px
+		);
+        mask: radial-gradient(
+			circle at 50% 100%,
+			rgba(255, 255, 255, 1),
+			transparent 25%,
+			transparent
+		);
         z-index: 0;
     }
 }
@@ -91,7 +103,11 @@ export default {
 			0 0 8px 1px rgba(255, 255, 255, .7),
 			0 0 20px 1px rgba(255, 255, 255, .6);
 		filter: blur(4px);
-		mask: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, .9));
+		mask: linear-gradient(
+			rgba(255, 255, 255, 1),
+			rgba(255, 255, 255, 1) 50%,
+			rgba(255, 255, 255, .9)
+		);
 	}
     &::after {
         content: "";
@@ -103,8 +119,20 @@ export default {
 		// transform-style: preserve-3d;
 		// transform-origin: center top;
 		// transform: rotateX(60deg);
-        background: repeating-radial-gradient(circle at 50% 0, transparent, transparent 5px, #3a77f6 5.1px, #3a77f6 6.4px, transparent 6.5px);
-        mask: radial-gradient(circle at 50% 0, rgba(255, 255, 255, .6), transparent 25%, transparent);
+        background: repeating-radial-gradient(
+			circle at 50% 0,
+			transparent,
+			transparent 5px,
+			#3a77f6 5.1px,
+			#3a77f6 6.4px,
+			transparent 6.5px
+		);
+        mask: radial-gradient(
+			circle at 50% 0,
+			rgba(255, 255, 255, .6),
+			transparent 25%,
+			transparent
+		);
         z-index: 3;
     }
 }
