@@ -51,7 +51,7 @@ export default new Router({
     {path: '/clipBox', name: 'clipBox', meta: {title: '裁剪Box'}, component: () => import('@/page/clipBox/index')},
 
     {path: '/smoke', name: 'smoke', meta: {title: '烟雾'}, component: () => import('@/page/smoke/index')},
-    // {path: '/borderAnimation', name: 'borderAnimation', meta: {title: '边框动画'}, component: () => import('@/page/borderAnimation/index')},
+    {path: '/fontFitBackground', name: 'fontFitBackground', meta: {title: '字体适配背景色'}, component: () => import('@/page/fontFitBackground/index')},
     // {path: '/snows', name: 'snows', meta: {title: '雪地'}, component: () => import('@/page/snows/index')},
     // {path: '/reflection', name: 'reflection', meta: {title: '倒影'}, component: () => import('@/page/reflection/index')},
     // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},

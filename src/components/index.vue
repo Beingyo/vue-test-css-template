@@ -58,7 +58,7 @@
 
     <el-row :gutter="10">
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="smoke" @click="routeLink">烟雾</span></div></el-col>
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="borderAnimation" @click="routeLink">边框动画</span></div></el-col> -->
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="fontFitBackground" @click="routeLink">字体适配背景色</span></div></el-col>
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="snows" @click="routeLink">雪地</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="reflection" @click="routeLink">倒影</span></div></el-col> -->
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="clipBox" @click="routeLink">裁剪Box</span></div></el-col> -->

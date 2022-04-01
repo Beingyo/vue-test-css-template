@@ -50,7 +50,7 @@ export default {
         if(frames <= 60) {
           displacement.setAttributeNS(null, 'scale', frames);
         }
-        
+
         bfx = 0.03;
         bfy = 0.03;
 
