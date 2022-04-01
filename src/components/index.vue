@@ -9,17 +9,17 @@
     </el-row>
 
     <el-row :gutter="10">
-      <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="deformation" @click="routeLink">变形</span></div></el-col>
+      <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="animationDemo" @click="routeLink">变形</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="dividingLine" @click="routeLink">分割线</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="ghost" @click="routeLink">幽灵</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="emotion" @click="routeLink">表情</span></div></el-col>
-      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="eater" @click="routeLink">吃豆人</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="pacMan" @click="routeLink">吃豆人</span></div></el-col>
     </el-row>
 
   <el-row :gutter="10">
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="eclipse" @click="routeLink">日食</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="weather" @click="routeLink">天气</span></div></el-col>
-      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="gradual" @click="routeLink">渐进入场</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="gradualIn" @click="routeLink">渐进入场</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="solidText" @click="routeLink">立体文字</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="fuse" @click="routeLink">融合</span></div></el-col>
     </el-row>
@@ -37,11 +37,11 @@
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="book" @click="routeLink">翻页</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="tunnel" @click="routeLink">隧道</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="card" @click="routeLink">卡片</span></div></el-col>
-      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="mouse" @click="routeLink">鼠标跟踪</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="mouseTracking" @click="routeLink">鼠标跟踪</span></div></el-col>
     </el-row>
 
     <el-row :gutter="10">
-      <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="scroll" @click="routeLink">滚动视差</span></div></el-col>
+      <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="rollingParallax" @click="routeLink">滚动视差</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="rotate" @click="routeLink">绕点旋转</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="carouselFilp" @click="routeLink">图片翻面</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="spotlight" @click="routeLink">聚光灯</span></div></el-col>
@@ -51,7 +51,7 @@
     <el-row :gutter="10">
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="borderSVG" @click="routeLink">SVG边框动画</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="borderAnimation" @click="routeLink">边框动画</span></div></el-col>
-      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="snows" @click="routeLink">雪地</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="snowfield" @click="routeLink">雪地</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="reflection" @click="routeLink">倒影</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="clipBox" @click="routeLink">裁剪Box</span></div></el-col>
     </el-row>

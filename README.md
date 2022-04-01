@@ -15,7 +15,7 @@
 
 ### 1.10.0(2021-12-24)
 
-例子：倒影
+例子：雪地、倒影
 
 ### 1.9.0(2021-07-16)
 
@@ -83,7 +83,7 @@
 
 #### 变形
 
-![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/deformation.png)
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/animationDemo.png)
 
 #### 分割线
 
@@ -99,7 +99,7 @@
 
 #### 吃豆人
 
-![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/eater.png)
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/pacMan.png)
 
 #### 日食
 
@@ -111,7 +111,7 @@
 
 #### 渐进入场
 
-![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/gradual.png)
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/gradualIn.png)
 
 #### 立体文字
 
@@ -159,11 +159,11 @@
 
 #### 鼠标跟踪
 
-![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/mouse.png)
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/mouseTracking.png)
 
 #### 滚动视差
 
-![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/scroll.png)
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/rollingParallax.png)
 
 #### 绕点旋转
 
@@ -184,6 +184,10 @@
 #### 边框动画
 
 ![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/borderAnimation.png)
+
+#### 雪地
+
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/snowfield.png)
 
 #### 倒影
 
