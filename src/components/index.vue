@@ -59,9 +59,17 @@
     <el-row :gutter="10">
       <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="smoke" @click="routeLink">烟雾</span></div></el-col>
       <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="fontFitBackground" @click="routeLink">字体适配背景色</span></div></el-col>
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="snows" @click="routeLink">雪地</span></div></el-col> -->
-      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="reflection" @click="routeLink">倒影</span></div></el-col> -->
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="fontDynamicBackground" @click="routeLink">文字动效背景</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="rollingParallax3D1" @click="routeLink">滚动视差3D 1</span></div></el-col>
       <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="clipBox" @click="routeLink">裁剪Box</span></div></el-col> -->
+    </el-row>
+
+    <el-row :gutter="10">
+      <!-- <el-col :span="3" :offset="2"><div class="grid-content bg-purple"><span id="test" @click="routeLink">测试</span></div></el-col>
+      <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="testBox" @click="routeLink">测试Box</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
+      <!-- <el-col :span="3" :offset="1"><div class="grid-content bg-purple"><span id="" @click="routeLink">0</span></div></el-col> -->
     </el-row>
 
     <el-row :gutter="10">
