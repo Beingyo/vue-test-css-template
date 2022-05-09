@@ -53,8 +53,8 @@ export default new Router({
     {path: '/smoke', name: 'smoke', meta: {title: '烟雾'}, component: () => import('@/page/smoke/index')},
     {path: '/fontFitBackground', name: 'fontFitBackground', meta: {title: '字体适配背景色'}, component: () => import('@/page/fontFitBackground/index')},
     {path: '/fontDynamicBackground', name: 'fontDynamicBackground', meta: {title: '文字动效背景'}, component: () => import('@/page/fontDynamicBackground/index')},
-    {path: '/rollingParallax3D1', name: 'rollingParallax3D1', meta: {title: '滚动视差3D 1'}, component: () => import('@/page/rollingParallax3D1/index')},
-    // {path: '/ghost', name: 'ghost', meta: {title: '幽灵'}, component: () => import('@/page/ghost/index')},
+    {path: '/rollingParallax3D', name: 'rollingParallax3D', meta: {title: '滚动视差3D'}, component: () => import('@/page/rollingParallax3D/index')},
+    {path: '/mouseTracking3D', name: 'mouseTracking3D', meta: {title: '鼠标互动3D'}, component: () => import('@/page/mouseTracking3D/index')},
 
     // {path: '/smoke', name: 'smoke', meta: {title: '烟雾'}, component: () => import('@/page/smoke/index')},
     // {path: '/fontFitBackground', name: 'fontFitBackground', meta: {title: '字体适配背景色'}, component: () => import('@/page/fontFitBackground/index')},

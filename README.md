@@ -210,6 +210,10 @@
 
 ![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/fontDynamicBackground.png)
 
-#### 3D滚动效果1
+#### 3D滚动效果
 
-![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/rollingParallax3D1.png)
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/rollingParallax3D.png)
+
+#### 鼠标互动3D
+
+![avatar](https://github.com/Beingyo/imgRepository/blob/main/img/vue-test-css-template/mouseTracking3D.png)

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="box">
-		<div style="transform-style: preserve-3d;" v-for="(item, index) in 10" :key="index">
-			<div class="box-front">{{msg[index].split(',')[0]}}</div>
-			<div class="box-behind">{{msg[index].split(',')[1]}}</div>
-		</div>
+      <div style="transform-style: preserve-3d;" v-for="(item, index) in 10" :key="index">
+        <div class="box-front">{{msg[index].split(',')[0]}}</div>
+        <div class="box-behind">{{msg[index].split(',')[1]}}</div>
+      </div>
     </div>
   </div>
 </template>
